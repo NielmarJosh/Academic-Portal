@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Academic Portal</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      width: 200px;
+      background: #111827;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 70px;
+    }
+
+    nav button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: none;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background: #1f2937;
+    }
+
+    main {
+      margin-left: 200px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Student Academic Portal</h1>
+</header>
+
+<nav>
+  <button onclick="showSection('dashboard')">Dashboard</button>
+  <button onclick="showSection('courses')">Courses</button>
+  <button onclick="showSection('grades')">Grades</button>
+  <button onclick="showSection('profile')">Profile</button>
+</nav>
+
+<main>
+  <section id="dashboard" class="card">
+    <h2>Welcome, Student</h2>
+    <p>Check announcements and upcoming tasks.</p>
+  </section>
+
+  <section id="courses" class="card hidden">
+    <h2>Your Courses</h2>
+    <ul>
+      <li>Mathematics</li>
+      <li>Science</li>
+      <li>English</li>
+    </ul>
+  </section>
+
+  <section id="grades" class="card hidden">
+    <h2>Grades</h2>
+    <p>Math: A</p>
+    <p>Science: B+</p>
+    <p>English: A-</p>
+  </section>
+
+  <section id="profile" class="card hidden">
+    <h2>Profile</h2>
+    <p>Name: Student Name</p>
+    <p>Level: College / High School</p>
+  </section>
+</main>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    document.getElementById(sectionId).classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
