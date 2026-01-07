@@ -2,63 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Academic Portal</title>
+  <title>Student Portfolio | IT Student</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f6f9;
+      margin: 0;
+      background: #f2f4f7;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
       background: #1e3a8a;
       color: white;
-      padding: 15px;
+      padding: 40px;
       text-align: center;
     }
 
     nav {
-      width: 200px;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .project {
+      border-left: 4px solid #1e3a8a;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    footer {
       background: #111827;
       color: white;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding-top: 70px;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
     }
 
-    nav button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      border: none;
-      background: none;
-      color: white;
-      text-align: left;
-      cursor: pointer;
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
     }
 
-    nav button:hover {
-      background: #1f2937;
-    }
-
-    main {
-      margin-left: 200px;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .hidden {
-      display: none;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -66,54 +79,99 @@
 <body>
 
 <header>
-  <h1>Student Academic Portal</h1>
+  <h1>Your Name</h1>
+  <p>IT Student | Aspiring Web Developer</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <button onclick="showSection('dashboard')">Dashboard</button>
-  <button onclick="showSection('courses')">Courses</button>
-  <button onclick="showSection('grades')">Grades</button>
-  <button onclick="showSection('profile')">Profile</button>
-</nav>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an IT student with a strong interest in creative problem-solving,
+    storytelling, and digital platforms. My background in creative writing
+    has strengthened my communication and analytical skills, while competitive
+    gaming has enhanced my ability to work in teams and adapt under pressure.
+    I aim to continuously improve my technical skills and apply them in
+    real-world IT environments.
+  </p>
+</section>
 
-<main>
-  <section id="dashboard" class="card">
-    <h2>Welcome, Student</h2>
-    <p>Check announcements and upcoming tasks.</p>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>Creative Writing & Storytelling</strong> – Writing novel-length narratives, world-building, and character development</li>
+    <li><strong>Critical Thinking & Strategy</strong> – Decision-making and adaptive thinking developed through competitive gaming (DOTA)</li>
+    <li><strong>Team Coordination</strong> – Role-based teamwork and communication in multiplayer environments</li>
+    <li><strong>Time Management</strong> – Meeting long-term writing goals while balancing academic responsibilities</li>
+    <li><strong>Basic Web Development</strong> – HTML, CSS, and JavaScript fundamentals</li>
+  </ul>
+</section>
 
-  <section id="courses" class="card hidden">
-    <h2>Your Courses</h2>
-    <ul>
-      <li>Mathematics</li>
-      <li>Science</li>
-      <li>English</li>
-    </ul>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
 
-  <section id="grades" class="card hidden">
-    <h2>Grades</h2>
-    <p>Math: A</p>
-    <p>Science: B+</p>
-    <p>English: A-</p>
-  </section>
+  <div class="project">
+    <h3>Personal Portfolio Website</h3>
+    <p>
+      Designed and developed a personal portfolio website using HTML, CSS,
+      and JavaScript to showcase skills, projects, certifications, and
+      extracurricular activities.
+    </p>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+  </div>
 
-  <section id="profile" class="card hidden">
-    <h2>Profile</h2>
-    <p>Name: Student Name</p>
-    <p>Level: College / High School</p>
-  </section>
-</main>
+  <div class="project">
+    <h3>Creative Writing Project</h3>
+    <p>
+      Authored an original novel-length story focusing on narrative structure,
+      pacing, thematic consistency, and revision workflows.
+    </p>
+    <p><strong>Skills Applied:</strong> Writing, planning, creativity, self-editing</p>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Introduction to Web Development – Self-Study / Online Learning</li>
+    <li>HTML & CSS Basics – Practice-Based Learning (In Progress)</li>
+  </ul>
+</section>
+
+<section id="activities">
+  <h2>Extracurricular Activities</h2>
+  <ul>
+    <li>Competitive Online Gaming (DOTA) – Teamwork, leadership, and strategic planning</li>
+    <li>Independent Creative Writing – Continuous practice of long-form writing and revision</li>
+  </ul>
+</section>
+
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Email: your.email@example.com</p>
+  <p>
+    GitHub: <a href="#">github.com/yourusername</a> |
+    LinkedIn: <a href="#">linkedin.com/in/yourname</a>
+  </p>
+</footer>
 
 <script>
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('main section');
-    sections.forEach(section => {
-      section.classList.add('hidden');
+  // Simple smooth scrolling for navigation
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
     });
-
-    document.getElementById(sectionId).classList.remove('hidden');
-  }
+  });
 </script>
 
 </body>
